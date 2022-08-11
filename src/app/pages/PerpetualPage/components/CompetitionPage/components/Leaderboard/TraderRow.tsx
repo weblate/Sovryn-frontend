@@ -17,7 +17,7 @@ interface ITraderRowProps {
 }
 
 export const TraderRow = forwardRef<HTMLDivElement, ITraderRowProps>(
-  ({ data, isUser, potentialPrize }, ref) => (
+  ({ data, isUser }, ref) => (
     <div
       ref={ref}
       className={classNames(
