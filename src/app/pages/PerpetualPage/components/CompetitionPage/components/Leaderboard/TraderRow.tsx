@@ -6,9 +6,6 @@ import { toNumberFormat } from 'utils/display-text/format';
 import classNames from 'classnames';
 import { LinkToExplorer } from '../../../../../../components/LinkToExplorer';
 import { PERPETUAL_CHAIN_ID } from '../../../../types';
-import { AssetValue } from 'app/components/AssetValue';
-import { Asset } from 'types';
-import { AssetValueMode } from 'app/components/AssetValue/types';
 
 interface ITraderRowProps {
   data: LeaderboardData;
