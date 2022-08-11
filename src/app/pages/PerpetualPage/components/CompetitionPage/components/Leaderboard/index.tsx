@@ -31,7 +31,6 @@ import {
 } from '@sovryn/perpetual-swap/dist/scripts/utils/perpUtils';
 import { PerpetualPair } from 'utils/models/perpetual-pair';
 import { Nullable } from 'types';
-import { usePerpetual_getAmmCompetitionProfit } from 'app/pages/PerpetualPage/hooks/usePerpetual_getAmmCompetitionProfit';
 
 interface ILeaderboardProps {
   data: RegisteredTraderData[];
