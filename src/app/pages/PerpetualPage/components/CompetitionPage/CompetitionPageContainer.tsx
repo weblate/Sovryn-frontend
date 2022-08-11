@@ -29,11 +29,9 @@ import {
   PerpetualPairType,
 } from 'utils/dictionaries/perpetual-pair-dictionary';
 import { RegisterDialog } from './components/RegisterDialog';
-import Countdown from 'react-countdown';
-import { CompetitionEndCountdown } from './components/CompetitionEndCountdown';
+import BugBountyLogo from '../../../../../assets/images/perpetuals_bug_bounty.svg';
 
 const baseUrl = notificationServiceUrl[currentChainId];
-const competitionEndTime = new Date(1658232000000); // Tuesday July 19th, 12pm UTC
 
 export const CompetitionPageContainer: React.FC = () => {
   const [registerDialogOpen, setRegisterDialogOpen] = useState(false);
@@ -130,9 +128,19 @@ export const CompetitionPageContainer: React.FC = () => {
       <HeaderLabs
         helpLink={WIKI_PERPETUAL_FUTURES_LINK}
         menus={
-          <Link to="/perpetuals" className="tw-mr-4 tw-text-black">
-            {t(translations.competitionPage.nav.perpetualSwap)}
-          </Link>
+          <>
+            <Link to="/perpetuals" className="tw-mr-4 tw-text-black">
+              {t(translations.competitionPage.nav.perpetualSwap)}
+            </Link>
+
+            <a
+              href="https://immunefi.com/bounty/sovrynperpetualfutures/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={BugBountyLogo} alt="Bug Bounty" />
+            </a>
+          </>
         }
       />
       <PerpetualQueriesContextProvider pair={pair}>
@@ -150,8 +158,8 @@ export const CompetitionPageContainer: React.FC = () => {
                 {t(translations.competitionPage.rules.title)}
               </div>
 
-              <div className="tw-mt-8 tw-mb-8">
-                <div>
+              <div className="tw-mt-2 tw-mb-8">
+                {/* <div>
                   <Countdown
                     date={competitionEndTime}
                     renderer={({ days, hours, minutes, seconds }) => (
@@ -163,7 +171,7 @@ export const CompetitionPageContainer: React.FC = () => {
                       />
                     )}
                   />
-                </div>
+                </div> */}
 
                 <div className="tw-mt-8">
                   <p>
@@ -200,9 +208,9 @@ export const CompetitionPageContainer: React.FC = () => {
                   </p>
                 </div>
 
-                <div>
+                {/* <div>
                   {t(translations.competitionPage.rules.prizeDistribution)}
-                </div>
+                </div> */}
 
                 <div className="tw-mt-6 tw-mb-8">
                   <a

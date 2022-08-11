@@ -13,7 +13,7 @@ import { AssetValueMode } from 'app/components/AssetValue/types';
 interface ITraderRowProps {
   data: LeaderboardData;
   isUser: boolean;
-  potentialPrize: number;
+  //potentialPrize: number;
 }
 
 export const TraderRow = forwardRef<HTMLDivElement, ITraderRowProps>(
@@ -31,7 +31,7 @@ export const TraderRow = forwardRef<HTMLDivElement, ITraderRowProps>(
       )}
     >
       <div className="tw-pl-3 tw-pr-1 tw-w-1/12 tw-my-auto">{data.rank}</div>
-      <div className="tw-pl-2 tw-pr-1 tw-w-3/12 tw-my-auto">
+      <div className="tw-pl-2 tw-pr-1 tw-w-4/12 tw-my-auto">
         <div
           className={
             isUser
@@ -75,7 +75,7 @@ export const TraderRow = forwardRef<HTMLDivElement, ITraderRowProps>(
       >
         {toNumberFormat(data.totalPnL, 2)}%
       </div>
-      <div className="tw-px-1 tw-w-2/12 tw-my-auto">
+      {/* <div className="tw-px-1 tw-w-2/12 tw-my-auto">
         {potentialPrize === 0 ? (
           '-'
         ) : (
@@ -87,7 +87,7 @@ export const TraderRow = forwardRef<HTMLDivElement, ITraderRowProps>(
             asset={Asset.BTCS}
           />
         )}
-      </div>
+      </div> */}
     </div>
   ),
 );
